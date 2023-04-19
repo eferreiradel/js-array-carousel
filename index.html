@@ -14,34 +14,33 @@
     <!-- custom Css -->
     <link rel="stylesheet" href="./style.css">
 
-    <!-- script -->
-    <script src="./main.js"></script>
 </head>
 <body class="vh-100 d-flex align-items-center justify-contentcenter">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-5 shadow-sm rounded-5 bg--primary pt-4 px-4 pb-5">
+            <div class="col-7 col-md-3 col-lg-2 shadow-sm rounded-5 bg--primary pt-4 px-4 pb-5">
                 <div class="card rounded-4">
                     <div class="card-header bg-black text-white rounded-top-4 text-center">
-                            <span>
-                                Carousel
-                            </span>
+                        <span>
+                            Carousel
                         </span>
-                    </div>
-                    <div class="card-body bg-black rounded-bottom-4">
-                        <img src="./img/sr26d6c21735165.gif" class="img-fluid" alt="">
-                    </div>
+                    </span>
                 </div>
-                <div class="container d-flex justify-content-between my-4">
-                    <button class="btn btn-dark rounde">
-                        <i class="fa fa-arrow-left"></i>
-                    </button>
-                    <button class="btn btn-dark rounded">
-                        <i class="fa fa-arrow-right"></i>
-                    </button>
+                <div class="card-body bg-black rounded-bottom-4 text-white" id="carousel__container">
                 </div>
+            </div>
+            <div class="container d-flex justify-content-between my-4">
+                <button class="btn btn-dark rounded" id="button__prev">
+                    <i class="fa fa-arrow-left"></i>
+                </button>
+                <button class="btn btn-dark rounded" id="button__next">
+                    <i class="fa fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </div>
+</div>
+<!-- script -->
+<script src="./main.js" async></script>
 </body>
 </html> 

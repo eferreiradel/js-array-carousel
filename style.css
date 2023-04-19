@@ -6,3 +6,10 @@
   background-color: rgb(121, 125, 237);
   border: 5px solid rgb(63, 22, 151);
 }
+
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
