@@ -1,24 +1,46 @@
-let foto = ["foto1", "foto2", "foto3", "foto4", "foto5"];
-let fotoDentro = foto[0];
+let slideImages = [];
 
-let zero = 0;
-document.getElementById("button__next").addEventListener("click", function () {
-  let add = zero++;
-  fotoDentro = foto[zero];
-  document.getElementById("carousel__container").innerHTML = fotoDentro;
-  console.log(fotoDentro);
-});
+slideImages[0] = "./img/img_1.gif";
+slideImages[1] = "./img/img_2.gif";
+slideImages[2] = "./img/img_3.gif";
 
-document.getElementById("button__prev").addEventListener("click", function () {
-  let subtract = zero--;
-  fotoDentro = foto[zero];
-  document.getElementById("carousel__container").innerHTML = fotoDentro;
-});
+console.log(slideImages[0]);
 
-/*
-document.getElementById("button__next").addEventListener("click", function () {
+let counter = -1;
 
-  fotoDentro = foto[0 + 1] ;
-});
+let btnNext = document.querySelector("#btnNext");
+let btnPrev = document.querySelector("#btnPrev");
 
-*/
+btnNext.addEventListener("click", imgNext);
+btnPrev.addEventListener("click", imgPrev);
+
+let display = document.querySelector("#cardBody");
+
+let imgToDisplay = document.createElement("img");
+imgToDisplay.classList.add("w-100");
+imgToDisplay.classList.add("border--black");
+
+function imgNext() {
+  let increment = counter++;
+
+  if (counter >= slideImages.length) {
+    counter = 0;
+  }
+
+  imgToDisplay.setAttribute("src", slideImages[counter]);
+  display.appendChild(imgToDisplay);
+  console.log(counter);
+  return increment;
+}
+function imgPrev() {
+  let increment = counter--;
+
+  if (counter <= -1) {
+    counter = 2;
+  }
+
+  imgToDisplay.setAttribute("src", slideImages[counter]);
+  display.appendChild(imgToDisplay);
+  console.log(increment);
+  return increment;
+}

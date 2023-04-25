@@ -1,15 +1,40 @@
+::before {
+  --main-bg: #2ff3e0;
+  --secondary-bg: #f8d210;
+  --asset-color: #fa26a0;
+  --deco-color: #f51720;
+}
+
 * {
+  box-sizing: border-box;
   /* border: 1px solid black; */
 }
 
-.bg--primary {
-  background-color: rgb(121, 125, 237);
-  border: 5px solid rgb(63, 22, 151);
+h2 {
+  font-family: "VT323", monospace;
 }
 
-.hidden {
-  display: none;
+body {
+  background-color: black;
 }
-.block {
-  display: block;
+
+/* color scheme */
+
+.bg--main {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #082248,
+    #0d2c5a,
+    #12376d,
+    #184180
+  );
+}
+
+.container--body {
+  background-color: var(--secondary-bg);
+}
+
+.border--black {
+  border: 5px solid black;
 }
